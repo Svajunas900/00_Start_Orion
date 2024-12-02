@@ -2,12 +2,17 @@ from recursiveFibonacci import fibonacci
 
 
 class Fibo:
-    def fibonacci(self, number_1):
-        if number_1 <= 1:
-            return number_1
+
+    def __init__(self, number):
+        self.number = number
+
+
+    def fibonacci(self):
+        if self.number <= 1:
+            return self.number
         else:
-            return self.fibonacci(number_1-2) + self.fibonacci(number_1-1)
+            return Fibo(self.number-2).fibonacci() + Fibo(self.number-1).fibonacci()
 
-fibo = Fibo()
+fibo = Fibo(6)
 
-print(fibo.fibonacci(5))
+print(fibo.fibonacci())
