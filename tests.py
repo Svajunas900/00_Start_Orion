@@ -19,7 +19,7 @@ def test_lru_fibonnaci():
 
 
 def test_Fibo():
-    fibo = Fibo(5)
+    fibo = Fibo()
     assert fibo.fibonacci(5) == 5
     assert fibo.fibonacci(6) == 8
     assert fibo.fibonacci(-1) == -1
