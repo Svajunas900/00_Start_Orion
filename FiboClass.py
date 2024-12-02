@@ -6,14 +6,15 @@ class Fibo:
     def __init__(self, number):
         self.number = number
 
-    def fibonacci(self):
-        if self.number <= 1:
-            return self.number
+    def fibonacci(self, number):
+        if number <= 1:
+            return number
         else:
-            return Fibo(self.number - 2).fibonacci() + \
-                Fibo(self.number - 1).fibonacci()
+            return self.fibonacci(number-2) + self.fibonacci(number-1)
 
+    def get_fibonnaci_number(self):
+        return self.fibonacci(self.number)
 
 fibo = Fibo(6)
 
-print(fibo.fibonacci())
+print(fibo.get_fibonnaci_number())
