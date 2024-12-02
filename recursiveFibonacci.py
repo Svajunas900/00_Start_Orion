@@ -6,7 +6,6 @@ def fibonacci(number):
         return number
     return fibonacci(number-2) + fibonacci(number-1)
 
-print(fibonacci(5))
 
 @lru_cache
 def lru_fibonacci(number):
@@ -14,4 +13,5 @@ def lru_fibonacci(number):
         return number
     return fibonacci(number-2) + fibonacci(number-1)
 
+print(fibonacci(5))
 print(lru_fibonacci(5))

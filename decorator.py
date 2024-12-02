@@ -3,6 +3,7 @@ def uppercase(func):
         return a_string.upper()
     return inner
 
+
 @uppercase
 def helloworld(b_string):
     return b_string
