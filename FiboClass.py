@@ -10,7 +10,8 @@ class Fibo:
         if self.number <= 1:
             return self.number
         else:
-            return Fibo(self.number-2).fibonacci() + Fibo(self.number-1).fibonacci()
+            return Fibo(self.number - 2).fibonacci() + \
+                Fibo(self.number - 1).fibonacci()
 
 
 fibo = Fibo(6)
