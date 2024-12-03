@@ -1,5 +1,6 @@
 from functools import lru_cache
 from time import perf_counter
+from decorator import odd_number
 
 
 def count_time(func):
@@ -12,11 +13,15 @@ def count_time(func):
     return inner
 
 
-@count_time
 def fibonacci(number):
     if number <= 1:
         return number
     return fibonacci(number - 2) + fibonacci(number - 1)
+
+
+@odd_number
+def get_fibo(number):
+    return fibonacci(number)
 
 
 @lru_cache

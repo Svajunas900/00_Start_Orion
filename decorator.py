@@ -9,4 +9,10 @@ def helloworld(b_string):
     return b_string
 
 
-print(helloworld("Hello world"))
+def odd_number(func):
+    def inner(n):
+        result = func(n)
+        if result % 2 == 1:
+            return result
+        return "Fibo result is not an odd value"
+    return inner
