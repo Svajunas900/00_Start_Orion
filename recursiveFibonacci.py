@@ -3,6 +3,9 @@ from time import perf_counter
 from decorator import odd_number
 
 
+def lambda_function(event,context):
+    return fibonacci(event.get("user_input"))
+
 def count_time(func):
     def inner(n):
         start = perf_counter()
