@@ -24,7 +24,7 @@ jobs:
 
     - name: Package Lambda function
       run: |
-        zip -r lambda.zip .
+        zip -r lambda.zip recursiveFibonacci.py lambda_function.py
     
     - name: Set up AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
