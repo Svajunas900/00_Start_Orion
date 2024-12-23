@@ -13,25 +13,25 @@ def count_time(func):
     return inner
 
 
-def fibonacci(number):
+def fibonacci(number: int) -> int:
     if number <= 1:
         return number
     return fibonacci(number - 2) + fibonacci(number - 1)
 
 
 @odd_number
-def get_fibo(number):
+def get_fibo(number: int) -> int:
     return fibonacci(number)
 
 
 @lru_cache
-def lru_fibonacci(number):
+def lru_fibonacci(number: int) -> int:
     if number <= 1:
         return number
     return fibonacci(number - 2) + fibonacci(number - 1)
 
 
-def cache_fibbonacci(number, cache=None):
+def cache_fibbonacci(number: int, cache=None) -> int:
     if cache is None:
         cache = {}
     if number in cache:

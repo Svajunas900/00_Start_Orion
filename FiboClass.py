@@ -3,10 +3,10 @@ from recursiveFibonacci import fibonacci
 
 class Fibo:
 
-    def __init__(self, number):
+    def __init__(self, number: int):
         self.number = number
 
-    def fibonacci(self, number):
+    def fibonacci(self, number: int) -> int:
         if number <= 1:
             return number
         else:
