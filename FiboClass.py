@@ -19,3 +19,4 @@ class Fibo:
 fibo = Fibo(6)
 
 print(fibo.get_fibonnaci_number())
+
